@@ -1,0 +1,156 @@
+.image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-section figure img
+{
+    border-radius: 50%;
+}
+
+.head-section p
+{
+    color: #47494c;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 1.5em;
+    font-family: 'Georgia';
+}
+
+.head-section p:nth-child(2)
+{
+    font-size: 1em;
+}
+
+.head-section
+{
+    padding: 2em 3em 2em 3em;
+    background-color: white;
+    outline: 0.1em solid #47494c;
+    outline-offset: -0.5em;
+}
+
+.info-section
+{
+    margin-top: 2em;
+}
+
+.skill-heading
+{
+    width: 65%;
+    margin: 1em auto 1em auto;
+    background-color: hsl(171, 100%, 41%);
+}
+
+h5
+{
+    color: #47494c;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: center;
+    font-family: 'Tahoma';
+}
+
+.skill-heading h5
+{
+    color: white;
+}
+
+.skill-section ul li
+{
+    text-align: center;
+}
+
+.profile-heading,
+.project-heading
+{
+    border-bottom: 0.1em solid hsl(171, 100%, 41%);
+    padding-bottom: 0.7em;
+}
+
+.profile-section p,
+.project-section ul
+{
+    margin-top: 1em;
+    word-wrap: break-word;
+}
+
+.project-section button,
+.project-section a
+{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.testing
+{
+    border: 1px solid yellowgreen;
+}
+
+.cms .hero-body .container ul
+{
+    list-style-type: square;
+}
+
+.card
+{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(102, 102, 102, 0.4);
+}
+
+.card-header-title
+{
+    color: #47494c;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-align: center;
+    font-family: 'Tahoma';
+}
+
+.hero-body .container .columns
+{
+    margin-top: 1em;
+}
+
+.cms .hero-body .container .columns .column,
+.smms .hero-body .container .columns .column,
+.pk .hero-body .container .columns .column,
+.bgip .hero-body .container .columns .column
+{
+    display: flex;
+}
+
+.feature
+{
+    opacity: 0.7;
+    font-size: 3em;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-section p {
+        margin-left : 1em;
+        margin-right: 1em;
+    }
+
+    .project-section button,
+    .project-section a {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .info-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill-section {
+        order: -1;
+    }
+
+}

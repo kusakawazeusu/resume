@@ -1,0 +1,426 @@
+:<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kuan Ting, Lin CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet/bulma.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet/index.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<script>
+
+    let nowSection = 0;
+
+    // window.onload = () => {
+    //     moveScroll(0);
+    // }
+
+    function pageScroll() {
+        nowSection = event.target.id.substr(-1);
+        moveScroll(nowSection);
+    }
+
+    function moveScroll(sectionNum) {
+        let moveTo = document.querySelector(`#project${sectionNum}Anchor`).getBoundingClientRect().top + window.scrollY - 20;
+
+        window.scroll({
+            top: moveTo,
+            left: 0, 
+            behavior: 'smooth' 
+        });
+    }
+
+</script>
+
+
+<body>
+    
+    <section class="hero is-primary">
+        <a id="project0Anchor"></a>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <div class="head-section">
+                            <p>Kuan Ting, Lin</p>
+                            <p>Frontend engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="columns is-centered info-section">
+
+        <div class="column is-3 profile-section">
+            <div class="profile-heading">
+                <h5>PROFILE</h5>
+            </div>
+            <p>
+                With a strong passion in web dev-elopment, 
+                I love diving into new tech, frameworks, commuity activities
+                and try using new things on side-projects.<br>
+                I believed that structured code is necessary and
+                usually spending time on refactoring,
+                because code with readability and robustness makes
+                life happier.
+            </p>
+        </div>
+        <div class="column is-3 skill-section">
+            <figure class="image is-128x128">
+                <img src="img/selfish.jpg">
+            </figure>
+            <div class="skill-heading">
+                <h5>SKILLS</h5>
+            </div>
+            <ul>
+                <li>Project Management</li>
+                <li>English Communication</li>
+                <li>Programming</li>
+                <li>Speeching</li>
+            </ul>
+        </div>
+        <div class="column is-3 profile-section">
+            <div class="profile-heading">
+                <h5>GOOD AT ...</h5>
+            </div>
+            <p>
+                <strong>Programming</strong><br>
+                Modern JavaScript, PHP, C++, Python, Database design<br><br>
+                <strong>Frontend</strong><br>
+                Vue.js, jQuery, webpack, CSS3<br><br>
+                <strong>Backend</strong><br>
+                Laravel, Node.js
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="columns is-centered info-section">
+
+        <div class="column is-3 profile-section">
+            <div class="profile-heading">
+                <h5>EDUCATION</h5>
+            </div>
+            <p>
+                <strong>Bachelor</strong><br>
+                Computer Science<br>
+                <small>National Taiwan University of science & tech</small>
+            </p>
+        </div>
+
+        <div class="column is-3 profile-section">
+            <div class="profile-heading">
+                <h5>NOW LEARNING</h5>
+            </div>
+            <p>
+                <strong>React</strong><br>
+                Another strong choice for frontend framework,
+                I love the huge ecosystem and community of react.<br>
+                <strong>PWA</strong><br>
+                While native APP products in market has been maximized,
+                PWA makes website more seamless, more like naive APPs.<br>
+                <strong>Sass</strong><br>
+                Tired of reading hard maintaining CSS code.
+            </p>
+        </div>
+
+        <div class="column is-3 project-section">
+            <div class="project-heading">
+                <h5>PROJECTS</h5>
+            </div>
+            <ul>
+                <button type="button" id="project1" onclick="pageScroll()" class="button is-primary is-outlined">Casino Management System</button>
+                <button type="button" id="project2" onclick="pageScroll()" class="button is-primary is-outlined">7PK Poker game</button>
+                <button type="button" id="project3" onclick="pageScroll()" class="button is-primary is-outlined">Speed Measurement System</button>
+                <button type="button" id="project4" onclick="pageScroll()" class="button is-primary is-outlined">Boardgame Info Platform</button>
+                <button class="button is-primary is-outlined">GitHub<i class="fab fa-github"></i></button>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <section class="hero is-info is-large cms">
+        <div class="hero-body">
+            <div class="container">
+                <a id="project1Anchor"></a>
+                <h1 class="title">Casino Management System</h1>
+                <h2 class="subtitle">
+                    Managing machines, members, operators and using an event-driven bus communicating with Slot game machines.
+                </h2>
+                <strong>Built with:</strong>
+                <ul>
+                    <li>Frontend: jQuery, Vue.js, Bootstrap</li>
+                    <li>Backend: Laravel</li>
+                    <li>Database: MySQL</li>
+                    <li>Disc: WebSocket, Node.js</li>
+                </ul>
+                
+                <div class="columns is-centered">
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #1 : Grid
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/cms_1.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                Using Ajax, supporting multiple-field searching, sorting,
+                                changing showing entries.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #2 : Machine monitoring
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/cms_2.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                Real-time getting data from gaming machines, using websocket to
+                                communicate with GCB.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #3 : Event-driven bus
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/cms_3.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                With node.js application polling and inserting data from
+                                management system and GCB.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-dark is-large pk">
+        <div class="hero-body">
+            <div class="container">
+                <a id="project2Anchor"></a>
+                <h1 class="title">7PK Poker Game</h1>
+                <h2 class="subtitle">
+                    A poker game with management system controlling the probability and calculating RTP from playing records.
+                </h2>
+                <strong>Built with:</strong>
+                <ul>
+                    <li>Frontend: jQuery, Bootstrap, phaser.js</li>
+                    <li>Backend: Laravel</li>
+                    <li>Database: MySQL</li>
+                    <li>Disc: Node.js</li>
+                </ul>
+                
+                <div class="columns is-centered">
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #1 : Poker Game
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/7pk_1.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                A poker game developed by phaser.js, the probability
+                                of dealing card can be controlled by management system.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #2 : Probability
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/7pk_2.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                Using management system to control probability and calculate consumers RTP
+                                in a unit of time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-warning is-large smms">
+        <div class="hero-body">
+                <div class="container">
+                    <a id="project3Anchor"></a>
+                    <h1 class="title">Speed Measurement Management System</h1>
+                    <h2 class="subtitle">
+                        Managing speed measurement equipment, supplier, appealing and violation analysis.
+                    </h2>
+                    <strong>Built with:</strong>
+                    <ul>
+                        <li>Frontend: jQuery, Bootstrap, chart.js</li>
+                        <li>Backend: Laravel</li>
+                        <li>Database: MySQL</li>
+                        <li>Disc: Node.js</li>
+                    </ul>
+                    
+                    <div class="columns is-centered">
+                        <div class="column is-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <p class="card-header-title">
+                                        Feature #1 : Violation statistics
+                                    </p>
+                                </div>
+                                <div class="card-image">
+                                    <figure class="image is-3by2">
+                                        <img src="img/smms_1.png">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    Using various charts to statistic violation data,
+                                    which sent to server immediately after shot by equipments.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <p class="card-header-title">
+                                        Feature #2 : Real-time Parsing
+                                    </p>
+                                </div>
+                                <div class="card-image">
+                                    <figure class="image is-3by2">
+                                        <img src="img/smms_2.png">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    Equipments will produce violation data after shooting a photo,
+                                    we auto-parsing them and display to users.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="hero is-danger is-large bgip">
+        <div class="hero-body">
+            <div class="container">
+                <a id="project4Anchor"></a>
+                <h1 class="title">Boardgame Info Platform (Progressing ...)</h1>
+                <h2 class="subtitle">
+                    Getting up-to-date boardgame news and info on this website,
+                    you can make your own recommendation lists, game review and record your
+                    game stats sharing with everyone.
+                </h2>
+                <strong>Built with:</strong>
+                <ul>
+                    <li>Frontend: Vue.js, Bulma</li>
+                    <li>Backend: Express</li>
+                    <li>Database: MySQL</li>
+                    <li>Disc: Python with beautifulsoup</li>
+                </ul>
+                
+                <div class="columns is-centered">
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #1 : Boardgame Info
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/bgip_1.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                Get game background, num of players, rule and other info.
+                                And user may make a correction when finding mistakes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #2 : Game list
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/bgip_2.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                This is a serious problem when playing boardgame,
+                                that's 'what game should we play?',
+                                you can find other player's recommendation or share your best choices with everyone.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <p class="card-header-title">
+                                    Feature #3 : Game review
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="img/bgip_3.png">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                Share your opinion of games on the website,
+                                or reading someone's review when hesitating while buying a new game.
+                                They will be really helpful!.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+
+
+</body>
+</html>
